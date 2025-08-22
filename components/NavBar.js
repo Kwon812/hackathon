@@ -26,22 +26,22 @@ export default function NavBar() {
     }, [scroll]);
     if(!(pathName==='/' || pathName.startsWith('/course/') || pathName.startsWith('/map'))) {
         return (
-            <div className={'flex justify-center  items-center  '}>
-                <div className={`grid grid-cols-5 bottom-0  bg-white/20 border backdrop-blur-lg fixed max-w-[500px] ${show?'translate-y-0':'translate-y-full'} duration-200  justify-center px-10 gap-10 py-2 bg-opacity-100 rounded-t-lg  bg-white`}>
-                    <Link href={'/home'}>
+            <div className={'flex justify-center  '}>
+                <div className={`grid grid-cols-4 w-full mx-10  bottom-0  bg-white/80  backdrop-blur-lg fixed max-w-[500px] ${show?'translate-y-0':'translate-y-full'} duration-200  px-10 gap-10 py-2 bg-opacity-100 rounded-t-lg  bg-white`}>
+                    <Link href={'/home'} className={'flex justify-center'}>
                     <Image width={24} height={48} src={'/imgs/navBar/home.svg'} alt={'e'}/>
                     </Link>
-                    <Link href={'/course'}>
+                    <Link href={'/course'} className={'flex justify-center'}>
                     <Image  width={24} height={48} className={''} src={'/imgs/navBar/course.svg'} alt={'e'}/>
                     </Link>
-                    <Link href={'/map'}>
+                    <Link href={'/map'} className={'flex justify-center'}>
                     <Image width={24} height={48} src={'/imgs/navBar/map.svg'} alt={'e'}/>
                     </Link>
-                    <Image width={24} height={48} src={'/imgs/navBar/community.svg'} alt={'e'}/>
+                    {/*<Image width={24} height={48} src={'/imgs/navBar/community.svg'} alt={'e'}/>*/}
+                    <Link href={'/my-page'} className={'flex justify-center'}>
                     <Image width={24} height={48} src={'/imgs/navBar/myPage.svg'} alt={'e'}/>
-
+                    </Link>
                 </div>
-
             </div>
         )
     }

@@ -27,11 +27,12 @@ export default function RootLayout({ children }) {
         className={`${geistSans.variable} ${geistMono.variable} antialiased  flex justify-center  `}
       >
       <Script
-          src={`https://oapi.map.naver.com/openapi/v3/maps.js?ncpKeyId=zf2my9vk54`}
+          src={`https://oapi.map.naver.com/openapi/v3/maps.js?ncpKeyId=${process.env.MAP_API_ID}`}
           strategy="beforeInteractive"
       />
       <div className={'max-w-[500px] w-full   flex flex-col  '}>
 
+          
 
         {children}
           <NavBar/>
